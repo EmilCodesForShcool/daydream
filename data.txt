@@ -1,1 +1,64 @@
-Hello this is a text file for idea dumping
+Hello this is a text file for idea dumping:
+- General information: Game is set in a magic academy that doesn't like dark magic. MC is one of the academy's best students and
+really wants to help people with his magic.
+- Dark magic man appears in MC's dream and tells him about an impedning doom on the world
+    + Tells MC to learn dark magic to help humanity since he's the only one capable
+    + Dark magic is scattered around the school and MC is tasked with finding those traces and learn them (in the form of books)
+    + There are a total of three books that got infected, MC has three days to find all three books (the books no longer have effect after that day and he will send more the next day)
+=> GAME START!
+
+GAMEPLAY LOOP
+Day 1: Book is in library, find the book and read it, reading the book takes the entire day + you gain details from the evil man, then go back, end of day
+Day 2: Book is in friend's possesion, friend knows that its dark magic and plans on getting rid of it, kill friend to get the book
+Day 3: Book is in teacher's room, teacher knows about you learning and plans to stop you, kill teacher 
+FINAL TRIAL: FIGHT AGAINST YOUR OWN WILL , IS IT WORTH IT?
+
+CHARACTERS:
+- Yuri: Excellent magic student, has a big heart and will to save others
+- Gabriel: Yuri's best friend, not so good of a student but is very kind. Cares for Yuri's wellbeing
+- Servus: Yuri's mentor and a high ranking teacher of academy
+- Voldem: A high-level dark magic practioner
+
+Reality is that Voldem is lying and just wants to turn Yuri into another vesel for him. Convinces that dark magic has powerful properties
+that can protect the world from a threat called "The Mutants" - mutated monsters that can hurt people by killing annihlating them.
+
+PLOT DIRECTIONS:
+- The ideal ending: You become a powerful dark magic mage and serves Voldem, conditions:
+    + Get rid of all obstacles (teacher, friend)
+    + Complete the final trial (yourself)
+    + Obtain all magic books
+- Lazy ending: You don't do anything (gets funny commentary from Voldem):
+    + If you don't even go to school in the first day
+- Failed ending: You try to commit to your path but is stopped:
+    + Stopped by friend/ teacher: Go to jail
+    + No kill friend => Good ending and MC can go back
+    + Killed by yourself: Voldem is disappointed and says he put his trust in the wrong person
+- True Ending: You figured out the truth before it's too late and you can still undo your mistakes:
+    + Get to the ideal ending, defeat yourself but say no at the final decision.
+    + The second book grants a lot of power and generates desctruction and death for the surrounding areas, you question 
+    whether is this power can actually defend others, recalling how you have killed innocents and your close ones for it.
+    Also scared about its potential and you slowly slipping.
+    => TURN BACK. You are too deep, at least you can do something one last good thing before dying (resucrection magic but at the cost of your own life to give back)
+    (Sacrificing yourself for the sake of others and the world)
+COMBAT:
+- Turn based: buffing moves, weak attacks and stronger attacks, healing
+- 4 battles:
+- DEMO (2 battles):
+    + Lore: try out your new powers and before and after => excited about new powers and feel powerful
+    + Combat tutorial
+- Gabriel battle: Slow attacks but very fast, can easily dodge => use new tentacle magic to hold her and defeat her (Slowly go insane since so drawn to the book)
+then snaps and kills her => MC questions decision and feels conflicted about losing a close friend but excited by the new power
+- Servus battle: Very strong attacks, wide AOE (buff stacker and very tanky)
+- Self battle: 
+    2 phases
+
+DARK MAGIC DEFINITON:
+- Purple looking attacks 
+- Evil aura
+- Tentacles, spikes
+
+LOCATIONS:
+- House of MC
+- library
+- teacher office
+- battle area (for the friend battle)
