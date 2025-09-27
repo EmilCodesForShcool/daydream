@@ -43,7 +43,7 @@ PLOT DIRECTIONS:
 COMBAT:
 - Turn based: buffing moves, weak attacks and stronger attacks, healing
 - 4 battles:
-- DEMO (2 battles):
+- DEMO:
     + Lore: try out your new powers and before and after => excited about new powers and feel powerful
     + Combat tutorial
 - Gabriel battle: Slow attacks but very fast, can easily dodge => use new tentacle magic to hold her and defeat her (Slowly go insane since so drawn to the book)
@@ -62,3 +62,10 @@ LOCATIONS:
 - library
 - teacher office
 - battle area (for the friend battle)
+
+PARTS OF THE UI:
+- Stats
+- Spells
+- Config* (not important)
+- Combat (combat from behind + combat effects like pokemon)
+
