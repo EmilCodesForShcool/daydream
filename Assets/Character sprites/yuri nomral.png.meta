@@ -162,8 +162,8 @@ TextureImporter:
       name: yuri nomral_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 480
+        x: 119
+        y: 0
         width: 120
         height: 160
       alignment: 0

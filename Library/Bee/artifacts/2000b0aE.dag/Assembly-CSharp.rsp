@@ -439,6 +439,8 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.6f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.6f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Character sprites/CharacterController2D.cs"
+"Assets/DialougeManager.cs"
+"Assets/DialougeTrigger.cs"
 "Assets/DoorCollider.cs"
 "Assets/Free UI build package/Script/Slide.cs"
 "Assets/Free UI build package/Script/Togglescript.cs"
