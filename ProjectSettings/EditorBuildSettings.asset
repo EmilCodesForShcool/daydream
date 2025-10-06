@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/intro.unity
     guid: dd26fab567d4e2ef9ad9cc03e7cbd37e
+  - enabled: 1
+    path: Assets/Scenes/combat.unity
+    guid: 8adf6bee7a3a96043912607cdfbf5ce1
+  - enabled: 1
+    path: Assets/Scenes/combat intro.unity
+    guid: bf622cc3a3a9b494cbe72062c23cfc09
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

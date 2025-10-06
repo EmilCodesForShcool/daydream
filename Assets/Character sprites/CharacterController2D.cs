@@ -19,11 +19,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        if (DialogueManager.Instance.isDialogueActive)
-        {
-            moveSpeed = 0;
-        }
-        rb.linearVelocity = moveInput * moveSpeed;
+            rb.linearVelocity = moveInput * moveSpeed;   
     }
 
     public void Move(InputAction.CallbackContext context)

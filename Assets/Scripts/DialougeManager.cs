@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
- 
+using UnityEngine.SceneManagement; 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
@@ -16,13 +16,18 @@ public class DialogueManager : MonoBehaviour
     public float typingSpeed = 0.2f;
  
     public Animator animator;
- 
+
+    Scene m_Scene;
+    string sceneName;
+
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
- 
+
         lines = new Queue<DialogueLine>();
+        m_Scene = SceneManager.GetActiveScene();
+        sceneName = m_Scene.name;
     }
  
     public void StartDialogue(Dialogue dialogue)
@@ -65,10 +70,22 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
     }
- 
+
     void EndDialogue()
     {
         isDialogueActive = false;
         animator.Play("hide");
+        if (sceneName == "intro")
+        {
+            SceneManager.LoadScene("bedroom");
+        }
+        else if (sceneName == "library")
+        {
+            SceneManager.LoadScene("combat intro");
+        }
+        else if (sceneName == "combat intro")
+        {
+            SceneManager.LoadScene("combat");
+        }
     }
 }

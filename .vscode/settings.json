@@ -66,6 +66,6 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "mage_choice.sln",
+    "dotnet.defaultSolution": "daydream.sln",
     "git.ignoreLimitWarning": true
 }
