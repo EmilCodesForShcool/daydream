@@ -293,7 +293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Attack
 --- !u!222 &131206424
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -412,8 +412,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1575329165}
-  - {fileID: 1246272374}
   - {fileID: 1771415013}
+  - {fileID: 1246272374}
   m_Father: {fileID: 57291655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -508,6 +508,8 @@ MonoBehaviour:
   playerBattleStation: {fileID: 1001232406}
   enemyBattleStation: {fileID: 285024320}
   dialogueText: {fileID: 1575329166}
+  playerHUD: {fileID: 2010776844}
+  enemyHUD: {fileID: 623600031}
   state: 0
 --- !u!1 &285024319
 GameObject:
@@ -741,6 +743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd77eba4b1372754ca850c180f8cd948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nameText: {fileID: 155211628}
+  hpSlider: {fileID: 987706038}
 --- !u!1 &830611645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1345,7 @@ GameObject:
   - component: {fileID: 1246272376}
   - component: {fileID: 1246272375}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Heal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1695,7 +1699,7 @@ GameObject:
   - component: {fileID: 1771415015}
   - component: {fileID: 1771415014}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1764,7 +1768,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1771415015}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 261403028}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnAttackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1771415015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2089,7 +2105,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Heal
 --- !u!222 &1981726103
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2188,6 +2204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd77eba4b1372754ca850c180f8cd948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nameText: {fileID: 1382224371}
+  hpSlider: {fileID: 1173786900}
 --- !u!1 &2104105744
 GameObject:
   m_ObjectHideFlags: 0
