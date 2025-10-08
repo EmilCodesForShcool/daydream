@@ -1,1 +1,1 @@
-C:\Users\Emoli\Desktop\Big coding projects\gamejam game\magechoice\daydream
+/home/emoli/Documents/GitHub/mage_choice/daydream
