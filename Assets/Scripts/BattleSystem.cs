@@ -45,12 +45,34 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAttack()
     {
         // Damage the enemy
-        enemyUnit.TakeDamage(playerUnit.damage);
+        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+
+        enemyHUD.SetHP(enemyUnit.currentUnit);
+        dialogueText.text = "Hit registered"
 
         yield return new WaitForSeconds(2f);
 
         // Check if the enemy is dead
-        // Change state based on what happended
+        if(isDead)
+        {
+            state = BattleState.WON;
+            EndBattle();   //Do the function later
+        {
+        else
+        {
+            state = BattleState.ENEMYTURN;
+            //StartCoroutine(EnemyTurn());
+        }
+    void EndBattle()
+    {
+        if(state== BattleState.WON)
+        {
+            dialogueText.text = "You won the battle!"
+        }
+        else if (state == BattleState.LOST)
+        {
+            dialogueText.text = "You lost!"
+        }
     }
     void PlayerTurn()
     {
