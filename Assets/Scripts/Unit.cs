@@ -8,12 +8,21 @@ public class Unit : MonoBehaviour
     public int maxHP;
     public int currentHP;
 
-    public bool TakeDamage(int dmg)
+    public bool TakeDamage(int dmg) //Function that deducts health for damage
     {
         currentHP -= dmg;
         if (currentHP <= 0)
             return true;
         else
             return false;
+    }
+
+    public void Heal (int amount) //Function for healing
+    {
+        currentHP += amount;
+        if (currentHP > amount)
+        {
+            currentHP = maxHP;
+        }
     }
 }
