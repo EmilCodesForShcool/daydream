@@ -25,4 +25,9 @@ public class Unit : MonoBehaviour
             currentHP = maxHP;
         }
     }
+
+    public void Buff (int amount) // Function for attack buffing + use it for story purposes
+    {
+        damage += amount;
+    }
 }
