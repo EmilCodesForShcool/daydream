@@ -28,21 +28,21 @@ public class BattleSystem : MonoBehaviour
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation); //Spawn the objects + make gameobject for ui changes
         playerUnit = playerGO.GetComponent<Unit>(); //Get the unit script to keep track of hp, damage, etc.
 
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
+        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation); //Create game objects
         enemyUnit = enemyGO.GetComponent<Unit>();
         dialogueText.text = "Try to defeat this " + enemyUnit.unitName;
 
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2f); 
 
         state = BattleState.PLAYERTURN;
-        PlayerTurn();
+        PlayerTurn(); //Start the battle with the player's turn
 
     }
 
-    IEnumerator PlayerAttack()
+    IEnumerator PlayerAttack() //Attact function
     {
         // Damage the enemy
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
@@ -56,37 +56,33 @@ public class BattleSystem : MonoBehaviour
         if(isDead)
         {
             state = BattleState.WON;
-            EndBattle();   //Do the function later
+            EndBattle();   //Stop the battle if you kill enemy
         {
         else
         {
             state = BattleState.ENEMYTURN;
-            StartCoroutine(EnemyTurn());
+            StartCoroutine(EnemyTurn()); //Switch to the enemy's turn
         }
-    IENumerator EnemyTurn()
+    IENumerator EnemyTurn() //Function for enemy turn
     {
         dialogueText.text = enemyUnit.unitName + " attacks!";
-
         yield return new WaitForSeconds(1f);
-
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
-
         playerHUD.SetHP(playerUnit.currentHP);
-
         yield return new WaitForSeconds(1f);
 
         if(isDead)
         {
-            state = BattleState.LOST;
+            state = BattleState.LOST; //If player dies, game over
             EndBattle();
         }
         else
         {
-            state = BattleState.PLAYERTURN;
+            state = BattleState.PLAYERTURN; //Switch to the player's turn
             PlayerTurn();
         }
     }
-    void EndBattle()
+    void EndBattle() //Function to display the battle's result
     {
         if(state== BattleState.WON)
         {
@@ -96,18 +92,24 @@ public class BattleSystem : MonoBehaviour
         {
             dialogueText.text = "You lost!"
         }
+
+    IEnumerator PlayerHeal() //Heal button
+    {
+        playerUnit.Heal(5);
+        playerHUD.SetHP(playerUnit.currentHP);
+        dialogueText.text = "You feel refreshed";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
     }
-    void PlayerTurn()
+    void PlayerTurn() //What to display on the player's turn
     {
         dialogueText.text = "Choose an action";
     }
 
-    IEnumerator PlayerHeal()
-    {
-        
-    }
-
-    public void OnAttackButton()
+    public void OnAttackButton() // Attack trigger, put it on the inspector
     {
         if (state != BattleState.PLAYERTURN)
             return;
@@ -115,7 +117,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerAttack());
     }
 
-    public void OnHealButton()
+    public void OnHealButton() //Heal trigger, put it on the inspector
     {
         if (state != BattleState.PLAYERTURN)
             return;
